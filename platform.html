@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17362f">
+    <meta name="description" content="Explore Priv Philanthropy's design-stage community priorities. No donations are currently accepted.">
+    <title>Explore priorities | Priv Philanthropy</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./src/platform.js"></script>
+  </head>
+  <body class="platform-page">
+    <header class="platform-bar">
+      <a class="wordmark" href="./index.html" aria-label="Priv Philanthropy home">
+        <img class="wordmark-icon" src="./images/priv-icon-192.png" alt="" width="40" height="40">
+        <span class="wordmark-type">
+          <span class="wordmark-main">PRIV</span>
+          <span class="wordmark-sub">PHILANTHROPY</span>
+        </span>
+      </a>
+      <nav class="platform-nav" aria-label="Main navigation">
+        <a class="is-active" href="./platform.html" aria-current="page">Explore</a>
+        <button id="saved-view" type="button" aria-pressed="false">Saved <span id="saved-count">0</span></button>
+      </nav>
+    </header>
+
+    <main class="platform-main">
+      <section class="platform-intro" aria-labelledby="platform-title">
+        <div class="platform-intro-copy">
+          <p class="eyebrow"><span></span> Community priorities</p>
+          <h1 id="platform-title">Start with what communities say they need.</h1>
+          <p>Explore the areas Priv Philanthropy is considering. These are early concepts, not active projects or funding campaigns. No gifts are being accepted.</p>
+          <div class="platform-state" aria-label="Platform status">
+            <span class="state-label">Priority discovery open</span>
+            <span class="state-label is-closed">Giving not open</span>
+          </div>
+        </div>
+        <figure class="platform-photo">
+          <img src="./images/township-markets.jpg" alt="A community market, representing local economies and shared infrastructure">
+          <figcaption>Community priorities begin with listening, not a preset funding target.</figcaption>
+        </figure>
+      </section>
+
+      <section class="explorer" aria-labelledby="explorer-title">
+        <div class="explorer-heading">
+          <div>
+            <p class="eyebrow"><span></span> Early-stage portfolio</p>
+            <h2 id="explorer-title">Explore priorities</h2>
+          </div>
+          <p class="explorer-count" id="result-count" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="explorer-tools">
+          <label class="search-control" for="priority-search">
+            Search priorities
+            <input id="priority-search" type="search" placeholder="Try power, water, learning..." autocomplete="off">
+          </label>
+          <div class="filter-list" role="group" aria-label="Filter by priority area">
+            <button class="filter-button" type="button" data-category="all" aria-pressed="true">All areas</button>
+            <button class="filter-button" type="button" data-category="energy" aria-pressed="false">Power</button>
+            <button class="filter-button" type="button" data-category="water" aria-pressed="false">Water</button>
+            <button class="filter-button" type="button" data-category="community" aria-pressed="false">Community spaces</button>
+            <button class="filter-button" type="button" data-category="learning-health" aria-pressed="false">Learning &amp; health</button>
+          </div>
+        </div>
+        <p class="storage-note" id="storage-note" hidden>Saved priorities are available only in this browser. Your list could not be stored between visits.</p>
+        <div class="priority-grid" id="priority-grid" aria-live="polite"></div>
+        <p class="platform-footnote"><strong>Before any giving opens:</strong> the operating entity, recipient, project partners, use of funds, local legal and tax treatment, and payment-provider approval must be confirmed. No project is currently represented as funded or underway.</p>
+      </section>
+    </main>
+
+    <dialog class="priority-dialog" id="priority-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-inner">
+        <div class="dialog-top">
+          <div>
+            <p class="eyebrow" id="dialog-category"></p>
+            <h2 id="dialog-title"></h2>
+          </div>
+          <button class="dialog-close" id="dialog-close" type="button" aria-label="Close priority details">×</button>
+        </div>
+        <p class="dialog-copy" id="dialog-summary"></p>
+        <div class="dialog-section">
+          <h3>What this concept means</h3>
+          <p id="dialog-description"></p>
+        </div>
+        <div class="dialog-section">
+          <h3>What must happen next</h3>
+          <p id="dialog-next-step"></p>
+        </div>
+        <div class="dialog-actions">
+          <button id="dialog-save" type="button">Save priority</button>
+          <button type="button" disabled title="Giving is not available until legal, recipient, and provider approvals are complete">Giving not open</button>
+          <a class="secondary" id="dialog-contact" href="https://www.sansmercantile.com/contact?subject=Priv%20Philanthropy%20Platform%20Updates" target="_blank" rel="noopener noreferrer">Ask about updates</a>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="platform-footer">
+      <span>Priv Philanthropy · Concept discovery</span>
+      <a href="./index.html">Read the vision</a>
+    </footer>
+  </body>
+</html>
