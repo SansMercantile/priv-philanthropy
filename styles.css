@@ -50,7 +50,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding: 25px clamp(24px, 6vw, 88px);
   border-bottom: 1px solid rgba(255,255,255,.22);
 }
-.wordmark { display: inline-flex; flex-direction: column; gap: 2px; text-decoration: none; }
+.wordmark { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
+.wordmark-icon { display: block; width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(225,29,72,.4)); }
+.wordmark-type { display: flex; flex-direction: column; gap: 2px; }
 .wordmark-main { font-size: 22px; font-weight: 800; line-height: 1; letter-spacing: .12em; }
 .wordmark-sub { font-size: 9px; font-weight: 700; letter-spacing: .22em; }
 .header-link { display: inline-flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 650; text-decoration: none; }
